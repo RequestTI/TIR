@@ -1,0 +1,29 @@
+<h1>Listing empresas</h1>
+
+<table>
+  <tr>
+    <th>Codigoempresa</th>
+    <th>Razaosocial</th>
+    <th>Nome</th>
+    <th>Localidade</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @empresas.each do |empresa| %>
+  <tr>
+    <td><%= empresa.codigoempresa %></td>
+    <td><%= empresa.razaosocial %></td>
+    <td><%= empresa.nome %></td>
+    <td><%= empresa.localidade %></td>
+    <td><%= link_to 'Show', empresa %></td>
+    <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
+    <td><%= link_to 'Excluir', empresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Empresa', new_empresa_path %>
