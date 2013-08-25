@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sumario:</b>
+  <%= @atendimento.sumario %>
+</p>
+
+<p>
+  <b>Resolucao:</b>
+  <%= @atendimento.resolucao %>
+</p>
+
+<p>
+  <b>Dataatualizacao:</b>
+  <%= @atendimento.dataAtualizacao %>
+</p>
+
+<p>
+  <b>Horaatualizacao:</b>
+  <%= @atendimento.horaAtualizacao %>
+</p>
+
+<p>
+  <b>Horafinalizacao:</b>
+  <%= @atendimento.horaFinalizacao %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @atendimento.status %>
+</p>
+
+<p>
+  <b>Tecnico:</b>
+  <%= @atendimento.tecnico.nome %>
+</p>
+
+<p>
+  <b>Registro:</b>
+  <%= @atendimento.registro.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_atendimento_path(@atendimento) %> |
+<%= link_to 'Back', atendimentos_path %>

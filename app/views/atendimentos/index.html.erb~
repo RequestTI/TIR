@@ -1,0 +1,37 @@
+<h1>Listing atendimentos</h1>
+
+<table>
+  <tr>
+    <th>Sumario</th>
+    <th>Resolucao</th>
+    <th>Dataatualizacao</th>
+    <th>Horaatualizacao</th>
+    <th>Horafinalizacao</th>
+    <th>Status</th>
+    <th>Tecnico</th>
+    <th>Registro</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @atendimentos.each do |atendimento| %>
+  <tr>
+    <td><%= atendimento.sumario %></td>
+    <td><%= atendimento.resolucao %></td>
+    <td><%= atendimento.dataAtualizacao %></td>
+    <td><%= atendimento.horaAtualizacao %></td>
+    <td><%= atendimento.horaFinalizacao %></td>
+    <td><%= atendimento.status %></td>
+    <td><%= atendimento.tecnico %></td>
+    <td><%= atendimento.registro %></td>
+    <td><%= link_to 'Show', atendimento %></td>
+    <td><%= link_to 'Edit', edit_atendimento_path(atendimento) %></td>
+    <td><%= link_to 'Excluir', atendimento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Atendimento', new_atendimento_path %>
