@@ -1,0 +1,8 @@
+= semantic_form_for [@tecnico] do |form|
+  
+  = form.input :matricula, :label => 'Matricula'
+  = form.input :nome, :label => 'Nome' 
+  = form.input :ocupacao, :label => 'Ocupacao' 
+  = form.input :especializacao, :label => 'Especializacao'
+  = form.input :tiposervico, :member_label => :titulo, :label => 'tiposervico' 
+  = form.submit 'Salvar'

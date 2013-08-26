@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130824065609) do
+ActiveRecord::Schema.define(:version => 20130826183810) do
+
+  create_table "atendimentos", :force => true do |t|
+    t.string   "sumario"
+    t.string   "resolucao"
+    t.date     "dataAtualizacao"
+    t.string   "horaAtualizacao"
+    t.string   "horaFinalizacao"
+    t.string   "status"
+    t.integer  "tecnico_id"
+    t.integer  "registro_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "atendimentos", ["registro_id"], :name => "index_atendimentos_on_registro_id"
+  add_index "atendimentos", ["tecnico_id"], :name => "index_atendimentos_on_tecnico_id"
 
   create_table "empresas", :force => true do |t|
     t.integer  "codigoempresa"
@@ -20,6 +36,25 @@ ActiveRecord::Schema.define(:version => 20130824065609) do
     t.string   "localidade"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "tecnicos", :force => true do |t|
+    t.string   "matricula"
+    t.string   "nome"
+    t.string   "ocupacao"
+    t.string   "especializacao"
+    t.integer  "tiposervico_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "tecnicos", ["tiposervico_id"], :name => "index_tecnicos_on_tiposervico_id"
+
+  create_table "tiposervicos", :force => true do |t|
+    t.string   "titulo"
+    t.string   "descricao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

@@ -1,4 +1,13 @@
 Tir::Application.routes.draw do
+  resources :tiposervicos
+
+
+  resources :tecnicos
+
+
+  resources :tipo_servicos
+
+
   resources :empresas
 
 

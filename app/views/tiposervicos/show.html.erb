@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @tiposervico.titulo %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @tiposervico.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_tiposervico_path(@tiposervico) %> |
+<%= link_to 'Back', tiposervicos_path %>

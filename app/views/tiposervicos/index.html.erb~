@@ -1,0 +1,25 @@
+<h1>Listing tiposervicos</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tiposervicos.each do |tiposervico| %>
+  <tr>
+    <td><%= tiposervico.titulo %></td>
+    <td><%= tiposervico.descricao %></td>
+    <td><%= link_to 'Show', tiposervico %></td>
+    <td><%= link_to 'Edit', edit_tiposervico_path(tiposervico) %></td>
+    <td><%= link_to 'Destroy', tiposervico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tiposervico', new_tiposervico_path %>
