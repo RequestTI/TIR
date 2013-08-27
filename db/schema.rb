@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130826183810) do
+ActiveRecord::Schema.define(:version => 20130826235022) do
 
   create_table "atendimentos", :force => true do |t|
     t.string   "sumario"
@@ -28,6 +28,19 @@ ActiveRecord::Schema.define(:version => 20130826183810) do
 
   add_index "atendimentos", ["registro_id"], :name => "index_atendimentos_on_registro_id"
   add_index "atendimentos", ["tecnico_id"], :name => "index_atendimentos_on_tecnico_id"
+
+  create_table "clientes", :force => true do |t|
+    t.string   "matricula"
+    t.string   "nome"
+    t.string   "sobrenome"
+    t.string   "lotacao"
+    t.string   "localidade"
+    t.integer  "empresa_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "clientes", ["empresa_id"], :name => "index_clientes_on_empresa_id"
 
   create_table "empresas", :force => true do |t|
     t.integer  "codigoempresa"

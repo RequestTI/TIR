@@ -1,0 +1,9 @@
+= semantic_form_for [@cliente] do |form|
+  
+  = form.input :matricula, :label => 'Matricula'
+  = form.input :nome, :label => 'Nome' 
+  = form.input :sobrenome, :label => 'Sobrenome' 
+  = form.input :lotacao, :label => 'Lotacao' 
+  = form.input :localidade, :label => 'Localidade'
+  = form.input :empresa, :member_label => :nome, :label => 'empresa' 
+  = form.submit 'Salvar'

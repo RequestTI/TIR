@@ -1,4 +1,7 @@
 Tir::Application.routes.draw do
+  resources :clientes
+
+
   resources :tiposervicos
 
 
