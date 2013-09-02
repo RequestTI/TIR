@@ -40,7 +40,7 @@ feature 'gerenciar empresa' do
   def preencher_e_verificar_empresa
 
       
-      fill_in 'Codigoempresa', :with => "01"
+      fill_in 'Codigoempresa', :with => "1"
       fill_in 'Razaosocial', :with => "Petroleo"
       fill_in 'Nome', :with => "Petrobras"
       fill_in 'Localidade', :with => "Parque de Tubos"
@@ -49,7 +49,7 @@ feature 'gerenciar empresa' do
  
       click_button 'Salvar'
 
-      page.should have_content 'Codigoempresa: 01'
+      page.should have_content 'Codigoempresa: 1'
       page.should have_content 'Razaosocial: Petroleo'
       page.should have_content 'Nome: Petrobras'
       page.should have_content 'Localidade: Parque de Tubos'

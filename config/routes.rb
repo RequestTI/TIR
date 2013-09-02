@@ -1,4 +1,7 @@
 Tir::Application.routes.draw do
+  resources :registros
+
+
   resources :clientes
   
   resources :atendimentos

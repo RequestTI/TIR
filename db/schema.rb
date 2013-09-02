@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130826235022) do
+ActiveRecord::Schema.define(:version => 20130901144123) do
 
   create_table "atendimentos", :force => true do |t|
     t.string   "sumario"
@@ -50,6 +50,21 @@ ActiveRecord::Schema.define(:version => 20130826235022) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
+
+  create_table "registros", :force => true do |t|
+    t.integer  "codregistro"
+    t.string   "descricao"
+    t.string   "complemento"
+    t.date     "data"
+    t.string   "hora"
+    t.integer  "tiposervico_id"
+    t.integer  "cliente_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "registros", ["cliente_id"], :name => "index_registros_on_cliente_id"
+  add_index "registros", ["tiposervico_id"], :name => "index_registros_on_tiposervico_id"
 
   create_table "tecnicos", :force => true do |t|
     t.string   "matricula"

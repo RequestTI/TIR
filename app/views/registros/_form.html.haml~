@@ -1,0 +1,9 @@
+= semantic_form_for [@registro] do |form|
+  
+  = form.input :descricao, :label => 'Descricao' 
+  = form.input :complemento, :label => 'Complemento' 
+  = form.input :data, :as => :string, :label => 'Data'
+  = form.input :hora, :label => 'Hora'
+  = form.input :tiposervico, :member_label => :titulo, :label => 'Tiposervico'
+  = form.input :cliente, :member_label => :nome, :label => 'Cliente'
+  = form.submit 'Salvar'

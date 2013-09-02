@@ -1,0 +1,34 @@
+<h1>Listing registro</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th>Complemento</th>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Tiposervico</th>
+    <th>Cliente</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @registros.each do |registro| %>
+  <tr>
+    <td><%= registro.codregistro %></td>
+    <td><%= registro.descricao %></td>
+    <td><%= registro.complemento %></td>
+    <td><%= registro.data %></td>
+    <td><%= registro.hora %></td>
+    <td><%= registro.tiposervico.titulo %></td>
+    <td><%= registro.cliente.nome %></td>
+    <td><%= link_to 'Show', registro %></td>
+    <td><%= link_to 'Edit', edit_registro_path(registro) %></td>
+    <td><%= link_to 'Excluir', registro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Registro', new_registro_path %>

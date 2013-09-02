@@ -1,5 +1,4 @@
 = semantic_form_for [@empresa] do |form|
-
   = form.input :razaosocial, :label => 'Razaosocial'
   = form.input :nome, :label => 'Nome'
   = form.input :localidade, :label => 'Localidade'

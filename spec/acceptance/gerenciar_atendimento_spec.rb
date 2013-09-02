@@ -7,7 +7,7 @@ feature 'gerenciar atendimento' do
 
     tecnico = FactoryGirl.create(:tecnico, :nome => 'XXX')
     
-    registro = FactoryGirl.create(:registro, :descricao => 'Teste descricao')
+    registro = FactoryGirl.create(:registro, :descricao => 'XX')
 
     visit new_atendimento_path
 
@@ -21,7 +21,7 @@ feature 'gerenciar atendimento' do
 
     tecnico = FactoryGirl.create(:tecnico, :nome => 'XXX')
     
-    registro = FactoryGirl.create(:registro, :descricao => 'Teste descricao')
+    registro = FactoryGirl.create(:registro, :descricao => 'XX')
 
     atendimento = FactoryGirl.create(:atendimento, :tecnico => tecnico, :registro => registro)
 
@@ -34,9 +34,9 @@ feature 'gerenciar atendimento' do
 
   scenario 'excluir atendimento' do #, :javascript => true do
 
-	tecnico = FactoryGirl.create(:tecnico, :nome => 'XXX')
+    tecnico = FactoryGirl.create(:tecnico, :nome => 'XXX')
     
-    registro = FactoryGirl.create(:registro, :descricao => 'Teste descricao')
+    registro = FactoryGirl.create(:registro, :descricao => 'XX')
 
     atendimento = FactoryGirl.create(:atendimento, :tecnico => tecnico, :registro => registro)
 
@@ -59,7 +59,7 @@ feature 'gerenciar atendimento' do
 
     
     select 'XXX', :from => 'Tecnico'
-    select 'Teste descricao', :from => 'Registro'
+    select 'XX', :from => 'Registro'
     
     click_button 'Salvar'
     
@@ -69,6 +69,8 @@ feature 'gerenciar atendimento' do
     page.should have_content 'Hora Atualização: 09:00'
     page.should have_content 'Hora Finalização: 09:40'
     page.should have_content 'Status: Resolvido'
+    page.should have_content 'Tecnico: XXX'
+    page.should have_content 'Registro: XX'
     
   end     
 
