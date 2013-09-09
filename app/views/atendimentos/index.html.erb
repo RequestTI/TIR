@@ -3,10 +3,10 @@
 <table>
   <tr>
     <th>Sumario</th>
-    <th>Resolucao</th>
-    <th>Dataatualizacao</th>
-    <th>Horaatualizacao</th>
-    <th>Horafinalizacao</th>
+    <th>Resolução</th>
+    <th>DataAtualizacao</th>
+    <th>HoraAtualizacao</th>
+    <th>HoraFinalizacao</th>
     <th>Status</th>
     <th>Tecnico</th>
     <th>Registro</th>
@@ -23,8 +23,8 @@
     <td><%= atendimento.horaAtualizacao %></td>
     <td><%= atendimento.horaFinalizacao %></td>
     <td><%= atendimento.status %></td>
-    <td><%= atendimento.tecnico %></td>
-    <td><%= atendimento.registro %></td>
+    <td><%= atendimento.tecnico.nome %></td>
+    <td><%= atendimento.registro.descricao %></td>
     <td><%= link_to 'Show', atendimento %></td>
     <td><%= link_to 'Edit', edit_atendimento_path(atendimento) %></td>
     <td><%= link_to 'Excluir', atendimento, method: :delete, data: { confirm: 'Are you sure?' } %></td>

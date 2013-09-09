@@ -6,22 +6,22 @@
 </p>
 
 <p>
-  <b>Resolucao:</b>
+  <b>Resolução:</b>
   <%= @atendimento.resolucao %>
 </p>
 
 <p>
-  <b>Dataatualizacao:</b>
+  <b>DataAtualizacao:</b>
   <%= @atendimento.dataAtualizacao %>
 </p>
 
 <p>
-  <b>Horaatualizacao:</b>
+  <b>HoraAtualizacao:</b>
   <%= @atendimento.horaAtualizacao %>
 </p>
 
 <p>
-  <b>Horafinalizacao:</b>
+  <b>HoraFinalizacao:</b>
   <%= @atendimento.horaFinalizacao %>
 </p>
 
@@ -37,7 +37,7 @@
 
 <p>
   <b>Registro:</b>
-  <%= @atendimento.registro %>
+  <%= @atendimento.registro.descricao %>
 </p>
 
 
