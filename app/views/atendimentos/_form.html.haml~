@@ -1,4 +1,5 @@
 = semantic_form_for [@atendimento] do |form|
+
   = form.input :sumario, :label => 'Sumario'
   = form.input :resolucao, :label => 'Resolucao'
   = form.input :dataAtualizacao, :label => 'DataAtualizacao'

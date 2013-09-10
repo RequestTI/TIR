@@ -34,7 +34,7 @@ feature 'gerenciar atendimento' do
 
   scenario 'excluir atendimento' do #, :javascript => true do
 
-	tecnico = FactoryGirl.create(:tecnico, :nome => 'XXX')
+    tecnico = FactoryGirl.create(:tecnico, :nome => 'XXX')
     
     registro = FactoryGirl.create(:registro, :descricao => 'XX')
 
