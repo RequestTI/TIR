@@ -26,6 +26,6 @@
 
 <br />
 
-<%= link_to 'Cadastrar Empresa', new_empresa_path %>
+<%= link_to 'New Empresa', new_empresa_path %>
 
 
