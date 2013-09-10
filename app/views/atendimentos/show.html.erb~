@@ -6,22 +6,34 @@
 </p>
 
 <p>
-  <b>Resolucao:</b>
+  <b>Resolução:</b>
   <%= @atendimento.resolucao %>
 </p>
 
 <p>
+<<<<<<< HEAD
   <b>Data atualizacao:</b>
+=======
+  <b>DataAtualizacao:</b>
+>>>>>>> 10b1ecad77d0758cd84a2f2a6e64b15c79896d54
   <%= @atendimento.dataAtualizacao %>
 </p>
 
 <p>
+<<<<<<< HEAD
   <b>Hora atualizacao:</b>
+=======
+  <b>HoraAtualizacao:</b>
+>>>>>>> 10b1ecad77d0758cd84a2f2a6e64b15c79896d54
   <%= @atendimento.horaAtualizacao %>
 </p>
 
 <p>
+<<<<<<< HEAD
   <b>Hora finalizacao:</b>
+=======
+  <b>HoraFinalizacao:</b>
+>>>>>>> 10b1ecad77d0758cd84a2f2a6e64b15c79896d54
   <%= @atendimento.horaFinalizacao %>
 </p>
 

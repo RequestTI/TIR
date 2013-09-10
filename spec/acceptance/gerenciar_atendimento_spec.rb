@@ -52,9 +52,9 @@ feature 'gerenciar atendimento' do
     
     fill_in 'Sumario', :with => 'Atendimento iniciado'
     fill_in 'Resolução', :with => 'Acesso concedido com sucesso'
-    fill_in 'Data Atualização', :with => '2013-10-10'
-    fill_in 'Hora Atualização', :with => '09:00'
-    fill_in 'Hora Finalização', :with => '09:40'
+    fill_in 'DataAtualizacao', :with => '2013-10-10'
+    fill_in 'HoraAtualizacao', :with => '09:00'
+    fill_in 'HoraFinalizacao', :with => '09:40'
     fill_in 'Status', :with => 'Resolvido'
 
     
@@ -65,9 +65,9 @@ feature 'gerenciar atendimento' do
     
     page.should have_content 'Sumario: Atendimento iniciado'
     page.should have_content 'Resolução: Acesso concedido com sucesso'
-    page.should have_content 'Data Atualização: 2013-10-10'
-    page.should have_content 'Hora Atualização: 09:00'
-    page.should have_content 'Hora Finalização: 09:40'
+    page.should have_content 'DataAtualizacao: 2013-10-10'
+    page.should have_content 'HoraAtualizacao: 09:00'
+    page.should have_content 'HoraFinalizacao: 09:40'
     page.should have_content 'Status: Resolvido'
     page.should have_content 'Tecnico: XXX'
     page.should have_content 'Registro: XX'
@@ -76,7 +76,6 @@ feature 'gerenciar atendimento' do
 
 end
 
-#rails g scaffold atendimento nome rua complemento sexo proprietario:references (chave estrangeira)
 #rake db:migrate db:test:prepare
 
 

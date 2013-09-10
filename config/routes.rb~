@@ -1,5 +1,12 @@
 Tir::Application.routes.draw do
+  get "home/index"
+
+  resources :registros
+
+
   resources :clientes
+  
+  resources :atendimentos
 
 
   resources :tiposervicos
