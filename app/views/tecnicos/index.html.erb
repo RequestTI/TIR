@@ -18,7 +18,7 @@
     <td><%= tecnico.nome %></td>
     <td><%= tecnico.ocupacao %></td>
     <td><%= tecnico.especializacao %></td>
-    <td><%= tecnico.tiposervico %></td>
+    <td><%= tecnico.tiposervico.titulo %></td>
     <td><%= link_to 'Show', tecnico %></td>
     <td><%= link_to 'Edit', edit_tecnico_path(tecnico) %></td>
     <td><%= link_to 'Excluir', tecnico, method: :delete, data: { confirm: 'Are you sure?' } %></td>

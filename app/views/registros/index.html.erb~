@@ -20,7 +20,7 @@
     <td><%= registro.complemento %></td>
     <td><%= registro.data %></td>
     <td><%= registro.hora %></td>
-    <td><%= registro.tiposervico. %></td>
+    <td><%= registro.tiposervico.titulo %></td>
     <td><%= registro.cliente.nome %></td>
     <td><%= link_to 'Show', registro %></td>
     <td><%= link_to 'Edit', edit_registro_path(registro) %></td>
