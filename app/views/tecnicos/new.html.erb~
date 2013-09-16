@@ -1,4 +1,4 @@
-<h1>Cadastrar Técnico</h1>
+<h1>Cadastrar Técnicos</h1>
 
 <%= render 'form' %>
 
