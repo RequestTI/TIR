@@ -19,6 +19,7 @@ gem 'mail_form'
 gem 'erb2haml'
 gem 'simple-navigation', '~> 3.11.0'
 gem 'devise', '~> 3.1.0'
+gem 'cancan', '~> 1.6.10'
 
 group :assets do
   gem 'sass-rails', '~> 3.2.6'
