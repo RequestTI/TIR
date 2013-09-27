@@ -1,0 +1,16 @@
+<%= form_for @empresa, :html => { :multipart => true } do |f| %>
+
+    <h2><%= I18n.t "activerecord.models.empresa" %></h2>
+
+    <p><%= f.label :razaosocial %><br />
+    <%= f.text_field :razaosocial %></p>
+
+    <p><%= f.label :nome %><br />
+    <%= f.text_field :nome %></p>
+
+    <p><%= f.label :localidade %><br />
+    <%= f.email_field :localidade %></p>
+    
+    <%= f.submit %>
+
+<% end %>

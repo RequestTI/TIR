@@ -1,0 +1,25 @@
+<%= form_for @cliente, :html => { :multipart => true } do |f| %>
+
+    <h2><%= I18n.t "activerecord.models.cliente" %></h2>
+
+    <p><%= f.label :matricula %><br />
+    <%= f.text_field :matricula %></p>
+
+    <p><%= f.label :nome %><br />
+    <%= f.text_field :nome %></p>
+
+    <p><%= f.label :sobrenome %><br />
+    <%= f.email_field :sobrenome %></p>
+    
+    <p><%= f.label :lotacao %><br />
+    <%= f.text_field :lotacao %></p>
+
+    <p><%= f.label :localidade %><br />
+    <%= f.text_field :localidade %></p>
+
+    <p><%= f.label :empresa_id %><br />
+    <%= f.collection_select :empresa_id, Empresa.all, :id, :nome %></br>           	        
+    
+    <%= f.submit %>
+
+<% end %>

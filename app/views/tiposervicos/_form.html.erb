@@ -1,0 +1,13 @@
+<%= form_for @tiposervico, :html => { :multipart => true } do |f| %>
+
+    <h2><%= I18n.t "activerecord.models.tiposervico" %></h2>
+
+    <p><%= f.label :titulo %><br />
+    <%= f.text_field :titulo %></p>
+
+    <p><%= f.label :descricao %><br />
+    <%= f.text_field :descricao %></p>
+
+    <%= f.submit %>
+
+<% end %>
