@@ -1,7 +1,5 @@
 <%= form_for @registro, :html => { :multipart => true } do |f| %>
 
-    <h2><%= I18n.t "activerecord.models.registro" %></h2>
-
     <p><%= f.label :descricao %><br />
     <%= f.text_field :descricao %></p>
 
@@ -14,12 +12,12 @@
     <p><%= f.label :hora %><br />
     <%= f.text_field :hora %></p>
 
-    <p><%= f.label :titulo %><br />
+    <p><%= f.label :tipo %><br />
     <%= f.collection_select :tiposervico_id, Tiposervico.all, :id, :titulo %></br> 
     
     <p><%= f.label :nome %><br />
     <%= f.collection_select :cliente_id, Cliente.all, :id, :nome %></br>
 
-    <%= f.submit %>
+    <%= f.submit%>
 
 <% end %>

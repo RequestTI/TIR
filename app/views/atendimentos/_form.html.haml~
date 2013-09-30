@@ -1,11 +1,11 @@
 = semantic_form_for [@atendimento] do |form|
 
   = form.input :sumario, :label => 'Sumario'
-  = form.input :resolucao, :label => 'Resolucao'
-  = form.input :dataAtualizacao, :as => String, :label => 'DataAtualizacao'
-  = form.input :horaAtualizacao, :label => 'HoraAtualizacao'
-  = form.input :horaFinalizacao, :label => 'HoraFinalizacao'
+  = form.input :resolucao, :label => 'Resolução'
+  = form.input :dataAtualizacao, :as => String, :label => 'Data Atualizacao'
+  = form.input :horaAtualizacao, :label => 'Hora Atualizacao'
+  = form.input :horaFinalizacao, :label => 'Hora Finalizacao'
   = form.input :status, :label => 'Status'
-  = form.input :tecnico, :member_label => :nome, :label => 'Tecnico'
+  = form.input :tecnico, :member_label => :nome, :label => 'Técnico'
   = form.input :registro, :member_label => :descricao, :label => 'Registro'
   = form.submit 'Salvar'

@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<!--<p>
+<p>
   <b>Codigoempresa:</b>
   <%= @empresa.codigoempresa %>
-</p>-->
+</p>
 
 <p>
   <b>Razaosocial:</b>

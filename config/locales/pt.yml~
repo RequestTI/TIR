@@ -1,0 +1,11 @@
+ pt:
+  title: Request TI
+  presentation: Sistema de solicitação de serviços de Tecnologia da Informação.
+  empresa: Empresas
+  cliente: Clientes
+  registro: Registros
+  tiposDeServico: Tipos de Serviço
+  tecnico: Técnicos
+  atendimento: Atendimentos
+  logado: Usando
+  

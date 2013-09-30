@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Codregistro:</b>
+<!--<p>
+  <b>Código do registro:</b>
   <%= @registro.codregistro %>
-</p>
+</p>-->
 
 <p>
   <b>Descricao:</b>
@@ -27,12 +27,12 @@
 
 <p>
   <b>Tiposervico:</b>
-  <%= @registro.tiposervico %>
+  <%= @registro.tiposervico.titulo %>
 </p>
 
 <p>
   <b>Cliente:</b>
-  <%= @registro.cliente %>
+  <%= @registro.cliente.nome %>
 </p>
 
 

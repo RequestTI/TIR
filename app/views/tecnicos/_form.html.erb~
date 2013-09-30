@@ -15,7 +15,7 @@
     <%= f.text_field :especializacao %></p>
 
     <p><%= f.label :titulo %><br />
-    <%= f.collection_select :tiposervico_id, Tiposervivo.all, :id, :titulo %></br>
+    <%= f.collection_select :tiposervico_id, Tiposervico.all, :id, :titulo %></br>
     
     <%= f.submit %>
 

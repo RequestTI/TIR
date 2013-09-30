@@ -1,7 +1,5 @@
 <%= form_for @atendimento, :html => { :multipart => true } do |f| %>
 
-    <h2><%= I18n.t "activerecord.models.atendimento" %></h2>
-
     <p><%= f.label :sumario %><br />
     <%= f.text_field :sumario %></p>
 
@@ -9,7 +7,7 @@
     <%= f.text_field :resolucao %></p>
 
     <p><%= f.label :dataAtualizacao %><br />
-    <%= f.email_field :dataAtualizacao %></p>
+    <%= f.text_field :dataAtualizacao %></p>
     
     <p><%= f.label :horaAtualizacao %><br />
     <%= f.text_field :horaAtualizacao %></p>
@@ -21,11 +19,11 @@
     <%= f.text_field :status %></p>
 
     <p><%= f.label :nome %><br />
-    <%= f.collection_select :nome, Tecnico::Nome, :to_s, :upcase %></br>
+    <%= f.collection_select :tecnico_id, Tecnico.all, :id, :nome %></br>
     
     <p><%= f.label :descricao %><br />
-    <%= f.collection_select :descricao, Registro::Descricao, :to_s, :upcase %></br>
-
+    <%= f.collection_select :registro_id, Registro.all, :id, :descricao %></br>
+    
     <%= f.submit %>
 
 <% end %>

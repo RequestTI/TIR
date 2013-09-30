@@ -1,30 +1,12 @@
-<%= form_for @atendimento, :html => { :multipart => true } do |f| %>
+<%= form_for @tiposervico, :html => { :multipart => true } do |f| %>
 
-    <h2><%= I18n.t "activerecord.models.atendimento" %></h2>
+    <h2><%= I18n.t "activerecord.models.tiposervico" %></h2>
 
-    <p><%= f.label :sumario %><br />
-    <%= f.text_field :sumario %></p>
+    <p><%= f.label :titulo %><br />
+    <%= f.text_field :titulo %></p>
 
-    <p><%= f.label :resolucao %><br />
-    <%= f.text_field :resolucao %></p>
-
-    <p><%= f.label :dataAtualizacao %><br />
-    <%= f.email_field :dataAtualizacao %></p>
-    
-    <p><%= f.label :horaAtualizacao %><br />
-    <%= f.text_field :horaAtualizacao %></p>
-
-    <p><%= f.label :horaFinalizacao %><br />
-    <%= f.text_field :horaFinalizacao %></p>
-
-    <p><%= f.label :status %><br />
-    <%= f.text_field :status %></p>
-
-    <p><%= f.label :nome %><br />
-    <%= f.collection_select :nome, Tecnico::Nome, :to_s, :upcase %></br>
-    
     <p><%= f.label :descricao %><br />
-    <%= f.collection_select :descricao, Registro::Descricao, :to_s, :upcase %></br>
+    <%= f.text_field :descricao %></p>
 
     <%= f.submit %>
 

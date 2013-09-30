@@ -2,8 +2,8 @@
 
 <table>
   <tr>
-    <th>Codigoempresa</th>
-    <th>Razaosocial</th>
+    <!--<th>Codigo da empresa</th>-->
+    <th>Razão social</th>
     <th>Nome</th>
     <th>Localidade</th>
     <th></th>
@@ -17,8 +17,8 @@
     <td><%= empresa.razaosocial %></td>
     <td><%= empresa.nome %></td>
     <td><%= empresa.localidade %></td>
-    <td><%= link_to 'Show', empresa %></td>
-    <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
+    <td><%= link_to 'Exibir', empresa %></td>
+    <td><%= link_to 'Editar', edit_empresa_path(empresa) %></td>
     <td><%= link_to 'Excluir', empresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -26,6 +26,6 @@
 
 <br />
 
-<%= link_to 'New Empresa', new_empresa_path %>
+<%= link_to 'Cadastrar Empresa', new_empresa_path %>
 
 

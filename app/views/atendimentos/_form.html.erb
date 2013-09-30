@@ -1,7 +1,5 @@
 <%= form_for @atendimento, :html => { :multipart => true } do |f| %>
 
-    <h2><%= I18n.t "activerecord.models.atendimento" %></h2>
-
     <p><%= f.label :sumario %><br />
     <%= f.text_field :sumario %></p>
 
@@ -20,7 +18,7 @@
     <p><%= f.label :status %><br />
     <%= f.text_field :status %></p>
 
-    <p><%= f.label :nome %><br />
+    <p><%= f.label :tecnico %><br />
     <%= f.collection_select :tecnico_id, Tecnico.all, :id, :nome %></br>
     
     <p><%= f.label :descricao %><br />

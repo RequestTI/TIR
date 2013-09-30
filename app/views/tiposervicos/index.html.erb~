@@ -1,9 +1,9 @@
-<h1>Listing tiposervicos</h1>
+<h1>Lista de tipos de serviço</h1>
 
 <table>
   <tr>
     <th>Titulo</th>
-    <th>Descricao</th>
+    <th>Descrição</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= tiposervico.titulo %></td>
     <td><%= tiposervico.descricao %></td>
-    <td><%= link_to 'Show', tiposervico %></td>
-    <td><%= link_to 'Edit', edit_tiposervico_path(tiposervico) %></td>
-    <td><%= link_to 'Destroy', tiposervico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Exibir', tiposervico %></td>
+    <td><%= link_to 'Editar', edit_tiposervico_path(tiposervico) %></td>
+    <td><%= link_to 'Excluir', tiposervico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tiposervico', new_tiposervico_path %>
+<%= link_to 'Cadastrar Tipo de serviço', new_tiposervico_path %>

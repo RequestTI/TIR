@@ -1,7 +1,5 @@
 <%= form_for @cliente, :html => { :multipart => true } do |f| %>
 
-    <h2><%= I18n.t "activerecord.models.cliente" %></h2>
-
     <p><%= f.label :matricula %><br />
     <%= f.text_field :matricula %></p>
 
@@ -9,7 +7,7 @@
     <%= f.text_field :nome %></p>
 
     <p><%= f.label :sobrenome %><br />
-    <%= f.email_field :sobrenome %></p>
+    <%= f.text_field :sobrenome %></p>
     
     <p><%= f.label :lotacao %><br />
     <%= f.text_field :lotacao %></p>

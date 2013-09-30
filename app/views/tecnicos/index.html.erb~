@@ -6,7 +6,7 @@
     <th>Nome</th>
     <th>Ocupacao</th>
     <th>Especializacao</th>
-    <th>Tiposervico</th>
+    <th>Tipo de serviço</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,9 +18,9 @@
     <td><%= tecnico.nome %></td>
     <td><%= tecnico.ocupacao %></td>
     <td><%= tecnico.especializacao %></td>
-    <td><%= tecnico.tiposervico %></td>
-    <td><%= link_to 'Show', tecnico %></td>
-    <td><%= link_to 'Edit', edit_tecnico_path(tecnico) %></td>
+    <td><%= tecnico.tiposervico.titulo %></td>
+    <td><%= link_to 'Exibir', tecnico %></td>
+    <td><%= link_to 'Editar', edit_tecnico_path(tecnico) %></td>
     <td><%= link_to 'Excluir', tecnico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -28,4 +28,4 @@
 
 <br />
 
-<%= link_to 'New Tecnico', new_tecnico_path %>
+<%= link_to 'Cadastrar Tecnico', new_tecnico_path %>

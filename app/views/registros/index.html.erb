@@ -1,13 +1,13 @@
-<h1>Listing registro</h1>
+<h1>Lista de registros</h1>
 
 <table>
   <tr>
- 	<th>Codregistro</th> 
-    <th>Descricao</th>
+ 	<!--<th>Codigo do registro</th> -->
+    <th>Descrição</th>
     <th>Complemento</th>
     <th>Data</th>
     <th>Hora</th>
-    <th>Tiposervico</th>
+    <th>Tipo</th>
     <th>Cliente</th>
     <th></th>
     <th></th>
@@ -16,15 +16,15 @@
 
 <% @registros.each do |registro| %>
   <tr>
-    <td><%= registro.codregistro %></td>
+    <!--<td><%= registro.codregistro %></td>-->
     <td><%= registro.descricao %></td>
     <td><%= registro.complemento %></td>
     <td><%= registro.data %></td>
     <td><%= registro.hora %></td>
     <td><%= registro.tiposervico.titulo %></td>
     <td><%= registro.cliente.nome %></td>
-    <td><%= link_to 'Show', registro %></td>
-    <td><%= link_to 'Edit', edit_registro_path(registro) %></td>
+    <td><%= link_to 'Exibir', registro %></td>
+    <td><%= link_to 'Editar', edit_registro_path(registro) %></td>
     <td><%= link_to 'Excluir', registro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -32,4 +32,4 @@
 
 <br />
 
-<%= link_to 'New Registro', new_registro_path %>
+<%= link_to 'Novo Registro', new_registro_path %>

@@ -1,3 +1,7 @@
 class HomeController < ApplicationController
-  
+
+	def index
+		flash[:notice] = t(:paragraph)
+	end
+
 end
