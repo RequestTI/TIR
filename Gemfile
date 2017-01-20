@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-gem 'bundler', '~> 1.13', '>= 1.13.7'
+gem 'bundler', '~> 1.13'
 
 gem 'inherited_resources', '~> 1.4.0'
 gem 'haml', '~> 4.0.3'
